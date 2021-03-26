@@ -1,7 +1,8 @@
+#  Timothy A. Meek II
+#
 #  File: MagicSquares.py
 #  Description: This program will create a magic square for a square with
 #               an odd number of sides.
-#  Timothy A. Meek II
 #
 #  Date Created: 04/16/2020
 #  Date Last Modified: 04/22/2020
