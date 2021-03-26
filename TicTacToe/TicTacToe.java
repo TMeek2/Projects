@@ -1,6 +1,6 @@
 // Tim Meek II
-// COSC 2430
-// 3/22/2021
+// 
+// Last updated: 3/22/2021
 // Description: This program allows two users to play Tic Tac Toe using one keyboard.
 
 import java.util.Scanner;
