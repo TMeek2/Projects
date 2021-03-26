@@ -1,5 +1,5 @@
 // Tim Meek II
-// Last updated: March 25, 2021 (Still in progress)
+// Last updated: March 25, 2021 (Still in development)
 // Description: This program creates a GUI for an "Address Book" database. The GUI allows the user to perform actions like
 //		search, insert, delete, and update to retrieve or edit the information from the database.
 
@@ -72,9 +72,7 @@ public class Addressbook extends JFrame implements ActionListener {
     	buttonPanel.setLayout(new GridLayout(3,2)); // Setting the layout of buttons
 
     	JPanel textPanel = new JPanel(); // Java panel to hold labels and text fields
-    	// textPanel.setLayout(new BoxLayout(textPanel, BoxLayout.PAGE_AXIS));
-		// textPanel.setLayout(new GridLayout(9, 1));
-		textPanel.setLayout(new GridLayout(10,1));
+	textPanel.setLayout(new GridLayout(10,1));
 
 
 
@@ -96,72 +94,72 @@ public class Addressbook extends JFrame implements ActionListener {
     	address = new JTextField(10);
 
     	JPanel addrPanel2 = new JPanel();
-		addrPanel2.setLayout(new FlowLayout());
-		JLabel addr2 = new JLabel("Address 2");
+	addrPanel2.setLayout(new FlowLayout());
+	JLabel addr2 = new JLabel("Address 2");
     	address2 = new JTextField(10);
 
-		JPanel cityPanel = new JPanel();
+	JPanel cityPanel = new JPanel();
     	cityPanel.setLayout(new FlowLayout());
     	JLabel cityName = new JLabel("City");
     	city = new JTextField(10);
 
-		JPanel statePanel = new JPanel();
+	JPanel statePanel = new JPanel();
     	statePanel.setLayout(new FlowLayout());
     	JLabel stateName = new JLabel("State");
     	state = new JTextField(10);
 
-		JPanel zipPanel = new JPanel();
+	JPanel zipPanel = new JPanel();
     	zipPanel.setLayout(new FlowLayout());
     	JLabel zip = new JLabel("ZipCode");
     	zipCode = new JTextField(10);
 
-		JPanel phonePanel = new JPanel();
+	JPanel phonePanel = new JPanel();
     	phonePanel.setLayout(new FlowLayout());
     	JLabel phone = new JLabel("Phone");
     	phoneNumber = new JTextField(10);
-			// formatting info here: https://docs.oracle.com/javase/tutorial/uiswing/components/formattedtextfield.html
+	// formatting info here: https://docs.oracle.com/javase/tutorial/uiswing/components/formattedtextfield.html
 
 
-		JPanel emailPanel = new JPanel();
+	JPanel emailPanel = new JPanel();
     	emailPanel.setLayout(new FlowLayout());
     	JLabel email = new JLabel("Email");
     	emailAddress = new JTextField(10);
 
     	FirstName.add(fname);
     	FirstName.add(f1);
-		FirstName.setBackground(Color.decode("#87ADDE"));
+	FirstName.setBackground(Color.decode("#87ADDE"));
 
     	LastName.add(lname);
     	LastName.add(l1);
-		LastName.setBackground(Color.decode("#87ADDE"));
+	LastName.setBackground(Color.decode("#87ADDE"));
 
     	addrPanel.add(addr);
     	addrPanel.add(address);
-		addrPanel.setBackground(Color.decode("#87ADDE"));
+	addrPanel.setBackground(Color.decode("#87ADDE"));
 
     	addrPanel2.add(addr2);
     	addrPanel2.add(address2);
-		addrPanel2.setBackground(Color.decode("#87ADDE"));
+	addrPanel2.setBackground(Color.decode("#87ADDE"));
 
-		cityPanel.add(cityName);
-		cityPanel.add(city);
-		cityPanel.setBackground(Color.decode("#87ADDE"));
+	cityPanel.add(cityName);
+	cityPanel.add(city);
+	cityPanel.setBackground(Color.decode("#87ADDE"));
 
-		statePanel.add(stateName);
-		statePanel.add(state);
-		statePanel.setBackground(Color.decode("#87ADDE"));
+	statePanel.add(stateName);
+	statePanel.add(state);
+	statePanel.setBackground(Color.decode("#87ADDE"));
 
-		zipPanel.add(zip);
-		zipPanel.add(zipCode);
-		zipPanel.setBackground(Color.decode("#87ADDE"));
+	zipPanel.add(zip);
+	zipPanel.add(zipCode);
+	zipPanel.setBackground(Color.decode("#87ADDE"));
 
-		phonePanel.add(phone);
-		phonePanel.add(phoneNumber);
-		phonePanel.setBackground(Color.decode("#87ADDE"));
+	phonePanel.add(phone);
+	phonePanel.add(phoneNumber);
+	phonePanel.setBackground(Color.decode("#87ADDE"));
 
-		emailPanel.add(email);
-		emailPanel.add(emailAddress);
-		emailPanel.setBackground(Color.decode("#87ADDE"));
+	emailPanel.add(email);
+	emailPanel.add(emailAddress);
+	emailPanel.setBackground(Color.decode("#87ADDE"));
 
 
 
@@ -171,50 +169,49 @@ public class Addressbook extends JFrame implements ActionListener {
     	textPanel.add(LastName);
     	textPanel.add(addrPanel);
     	textPanel.add(addrPanel2);
-		textPanel.add(cityPanel);
-		textPanel.add(statePanel);
-		textPanel.add(zipPanel);
-		textPanel.add(phonePanel);
-		textPanel.add(emailPanel);
-		textPanel.setBackground(Color.decode("#87ADDE"));
-		// textPanel.setLayout(new GridLayout(9,1));
+	textPanel.add(cityPanel);
+	textPanel.add(statePanel);
+	textPanel.add(zipPanel);
+	textPanel.add(phonePanel);
+	textPanel.add(emailPanel);
+	textPanel.setBackground(Color.decode("#87ADDE"));
 
     	mFrame = new JInternalFrame("Address Book Operations", true,true, true, true);
     	mFrame.setLayout(new BorderLayout());
 
     	JButton insertButton = new JButton("Insert");
     	insertButton.addActionListener(this);
-		insertButton.setToolTipText("A new entry will be placed in the address book database, with the values in the text fields.");
+	insertButton.setToolTipText("A new entry will be placed in the address book database, with the values in the text fields.");
 
     	JButton deleteButton = new JButton("Delete");
     	deleteButton.addActionListener(this);
-		deleteButton.setToolTipText("This button will delete all information for the top search result. The search function must be used prior to using delete.");
+	deleteButton.setToolTipText("This button will delete all information for the top search result. The search function must be used prior to using delete.");
 
     	JButton newButton = new JButton("New");
     	newButton.addActionListener(this);
-		newButton.setToolTipText("This button will clear all text fields.");
+	newButton.setToolTipText("This button will clear all text fields.");
 
-		JButton searchButton = new JButton("Search");
+	JButton searchButton = new JButton("Search");
     	searchButton.addActionListener(this);
-		searchButton.setToolTipText("This function will search for and display the information of all users in the address book database. You can search by first name, last name, or leave both empty to show all entries.");;
+	searchButton.setToolTipText("This function will search for and display the information of all users in the address book database. You can search by first name, last name, or leave both empty to show all entries.");;
 
-		JButton updateButton = new JButton("Update");
+	JButton updateButton = new JButton("Update");
     	updateButton.addActionListener(this);
-		updateButton.setToolTipText("After using the search function, the information for the top search result will be updated with the information in the text fields.");
+	updateButton.setToolTipText("After using the search function, the information for the top search result will be updated with the information in the text fields.");
 
-		JButton fillFormButton = new JButton("Fill Form");
+	JButton fillFormButton = new JButton("Fill Form");
     	fillFormButton.addActionListener(this);
-		fillFormButton.setToolTipText("After using the search function, the information of the top search result can be used to fill the text fields.");
+	fillFormButton.setToolTipText("After using the search function, the information of the top search result can be used to fill the text fields.");
 
-		mFrame.setBackground(Color.decode("#87ADDE"));
-		mFrame.setForeground(Color.decode("#87ADDE"));
-    	
-		buttonPanel.add(newButton);
+	mFrame.setBackground(Color.decode("#87ADDE"));
+	mFrame.setForeground(Color.decode("#87ADDE"));
+
+	buttonPanel.add(newButton);
     	buttonPanel.add(insertButton);
     	buttonPanel.add(deleteButton);
-		buttonPanel.add(searchButton);
-		buttonPanel.add(updateButton);
-		buttonPanel.add(fillFormButton);
+	buttonPanel.add(searchButton);
+	buttonPanel.add(updateButton);
+	buttonPanel.add(fillFormButton);
 		
 
     	mFrame.setSize(325, 500);
@@ -223,22 +220,20 @@ public class Addressbook extends JFrame implements ActionListener {
 
     	mFrame.add(textPanel, BorderLayout.WEST); // adds textPanel to the main frame of the window
     	mFrame.add(buttonPanel, BorderLayout.SOUTH);// adds buttons to the main frame
-		mFrame.setFrameIcon(editIcon);
-		mFrame.setVisible(true);
+	mFrame.setFrameIcon(editIcon);
+	mFrame.setVisible(true);
     	dtp.add(mFrame);
 
 
-		// Search Pane
-		sFrame = new JInternalFrame("Search Results", true,true, true, true);
-		sFrame.setLayout(new BorderLayout());
-		sFrame.setSize(1100, 500);
+	// Search Pane
+	sFrame = new JInternalFrame("Search Results", true,true, true, true);
+	sFrame.setLayout(new BorderLayout());
+	sFrame.setSize(1100, 500);
     	sFrame.setLocation(325, 0);
-		sFrame.setBackground(Color.decode("#deb887"));
-		sFrame.setFrameIcon(searchIcon);
-		sFrame.setVisible(true);
-		// JTextArea textArea = new JTextArea();
-		// sFrame.add(textArea);
-		dtp.add(sFrame);
+	sFrame.setBackground(Color.decode("#deb887"));
+	sFrame.setFrameIcon(searchIcon);
+	sFrame.setVisible(true);
+	dtp.add(sFrame);
 
 
    }
@@ -251,10 +246,10 @@ public class Addressbook extends JFrame implements ActionListener {
 				
 				Connection connection = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\Tim Meek\\Desktop\\UTPB Spring 2021\\Information Systems\\AddressBook\\AddressBook\\src\\addressbook.accdb");
 
-		        Statement statement = connection.createStatement();
+				Statement statement = connection.createStatement();
 
-		        firstname = f1.getText(); //gets the value from the text field (first name)
-		        lastname = l1.getText(); // gets the value from the text field (last name)
+				firstname = f1.getText(); //gets the value from the text field (first name)
+				lastname = l1.getText(); // gets the value from the text field (last name)
 				Address1 = address.getText();
 				Address2 = address2.getText();
 				City = city.getText();
@@ -290,8 +285,8 @@ public class Addressbook extends JFrame implements ActionListener {
 			}
 			catch ( SQLException sqlException ) {
 	         	JOptionPane.showMessageDialog( null,
-	            sqlException.getMessage(), "Database Error",
-	            JOptionPane.ERROR_MESSAGE );
+		        sqlException.getMessage(), "Database Error",
+		        JOptionPane.ERROR_MESSAGE );
 	         	System.exit( 1 );
 	     	}
 
@@ -305,7 +300,7 @@ public class Addressbook extends JFrame implements ActionListener {
 		else if(e.getActionCommand().equals("New"))
 		{
 			f1.setText(""); //gets the value from the text field (first name)
-		    l1.setText(""); // gets the value from the text field (last name)
+		        l1.setText(""); // gets the value from the text field (last name)
 			address.setText("");
 			address2.setText("");
 			city.setText("");
@@ -388,9 +383,9 @@ public class Addressbook extends JFrame implements ActionListener {
 			   	ResultSet resultSet = null;
 
 			   	firstname = f1.getText(); //gets the value from the text field (first name)
-		    	lastname = l1.getText(); // gets the value from the text field (last name)
+		    	        lastname = l1.getText(); // gets the value from the text field (last name)
 
-			   // query database
+			       // query database
 			   	if (!firstname.isBlank() && !lastname.isBlank()){
 					resultSet = statement.executeQuery( "SELECT names.personID, firstName, lastName, address1, address2, city, state, zipcode, phoneNumber, emailAddress FROM names INNER JOIN (addresses INNER JOIN ( emailAddresses INNER JOIN phoneNumbers ON emailAddresses.personID = phoneNumbers.personID) ON addresses.personID = emailAddresses.personID) ON names.personID = addresses.personID WHERE firstName LIKE '"+firstname+"' AND lastName LIKE '"+lastname+"'");
 					// resultSet = statement.executeQuery( "SELECT * FROM names WHERE firstName LIKE '"+firstname+"' AND lastName LIKE '"+lastname+"'");
@@ -420,12 +415,6 @@ public class Addressbook extends JFrame implements ActionListener {
 						results.append( resultSet.getObject( i ) + "\t" );
 						if(resultSet.getObject(i) == "")
 							results.append("\t");
-						// else if (resultSet.getObject(i).length() > 13)
-
-
-						// int columnWidth = metaData.getColumnName(i).length() + "\t".length() ;
-						// results.append(String.format("%-"+columnWidth+"s", resultSet.getObject( i )));//formatting test
-						// results.append(String.format("|%-20.15s|", resultSet.getObject( i )));//formatting test
 					}
 					results.append( "\n" );
 			   	}
@@ -478,8 +467,7 @@ public class Addressbook extends JFrame implements ActionListener {
 	  
 			catch(ClassNotFoundException cnfex) {
 	  
-				System.out.println("Problem in loading or "
-						+ "registering MS Access JDBC driver");
+				System.out.println("Problem in loading or " + "registering MS Access JDBC driver");
 				cnfex.printStackTrace();
 			}
 		}  
@@ -603,7 +591,6 @@ public class Addressbook extends JFrame implements ActionListener {
 						}
 					}
 				}
-				// statement.close();
 				connection.close();
 			} // try
 
@@ -617,10 +604,7 @@ public class Addressbook extends JFrame implements ActionListener {
 			catch(ClassNotFoundException cnfex) {
 					System.out.println("Problem in loading or " + "registering MS Access JDBC driver");
 					cnfex.printStackTrace();
-				}
-
-
-			
+				}			
 		}
 		
 		else
