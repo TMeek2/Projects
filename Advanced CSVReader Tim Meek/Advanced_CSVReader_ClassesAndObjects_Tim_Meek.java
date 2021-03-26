@@ -7,10 +7,10 @@
 import java.util.Scanner;
 import java.io.File;
 
-public class Advanced_CSVReader_ClassesAndObjects_Tim_Meek {
+public class CSVReader {
     public static void main(String[] args) throws Exception {
 
-        Scanner s = new Scanner(new File("AdvancedCSVForObjectsInput.txt")); // Read the file
+        Scanner s = new Scanner(new File("CSVInput.txt")); // Read the file
 
 
         // Step 1: Create your CSV 2D String Array using data from section 1 of text file
