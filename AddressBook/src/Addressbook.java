@@ -1,3 +1,8 @@
+// Tim Meek II
+// Last updated: March 25, 2021 (Still in progress)
+// Description: This program creates a GUI for an "Address Book" database. The GUI allows the user to perform actions like
+//		search, insert, delete, and update to retrieve or edit the information from the database.
+
 import java.awt.*;
 import java.sql.*;
 import java.util.*;
