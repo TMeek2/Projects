@@ -1,6 +1,6 @@
 // Tim Meek II
-// COSC 3420
-// February 25, 2021
+// 
+// Last updated: February 25, 2021
 // Description: The purpose of this program is to simulate the "Let's Make A Deal" TV show to
 // determine whether you have a higher chance of winning if you hold your original door or switch
 
