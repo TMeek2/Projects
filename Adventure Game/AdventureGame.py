@@ -1,7 +1,8 @@
+#  Timothy A. Meek II
+#
 #  File: AdventureGame.py
 #  Description: This program is the structure of an adventure game that on simple commands from the user.
 #               The program relies on a .txt file that can be easily customized to create a new map.
-#  Timothy A. Meek II
 #
 #  Date Created: 04/09/2020
 #  Date Last Modified: 05/06/2020
