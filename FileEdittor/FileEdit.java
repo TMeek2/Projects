@@ -1,6 +1,6 @@
 // Tim Meek II
-// COSC 3420
-// March 18, 2021
+// 
+// Last updated: March 18, 2021
 // Description: This program is a simple file edittor that runs in Java
 //              and allows the user to use simple actions in the Java terminal
 
